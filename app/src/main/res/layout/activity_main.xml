@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clyMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/instrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/instrucciones_tema"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="26dp"
+                android:text="@string/instrucciones_sexo"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/groupRadio"
+                android:layout_width="135dp"
+                android:layout_height="86dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="59dp">
+
+                <RadioButton
+                    android:id="@+id/sMujer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mujer" />
+
+                <RadioButton
+                    android:id="@+id/sHombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hombre" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/text_edad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_edad"
+                android:gravity="center"/>
+
+            <Spinner
+                android:id="@+id/sEdad"
+                android:layout_width="146dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:entries="@array/edades"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.785"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_peso"
+                android:layout_marginTop="26dp"
+                android:gravity="center"/>
+
+            <RadioGroup
+                android:id="@+id/groupRadioPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="174dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.061"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/pBajo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bajo Peso"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/pNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Peso Normal"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/pSobre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sobrepeso"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/pObe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Obesidad"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textPadecimientos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_padecimientos"
+                android:layout_marginTop="26dp"
+                android:gravity="center"/>
+
+            <CheckBox
+                android:id="@+id/checkPadecimiento1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_padecimiento_1" />
+            <CheckBox
+                android:id="@+id/checkPadecimiento2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_padecimiento_2" />
+            <CheckBox
+                android:id="@+id/checkPadecimiento3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_padecimiento_3" />
+            <CheckBox
+                android:id="@+id/checkPadecimiento4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_padecimiento_4" />
+            <CheckBox
+                android:id="@+id/checkPadecimiento5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_padecimiento_5" />
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/nRiesgo"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Nivel de riesgo"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.84"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                    <TextView
+                        android:id="@+id/vResult"
+                        android:layout_width="200dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textSize="60sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.75"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nRiesgo" />
+
+                    <TextView
+                        android:id="@+id/vMensaje"
+                        style="@null"
+                        android:layout_width="411dp"
+                        android:layout_height="53dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:shadowColor="#000000"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        app:autoSizeMaxTextSize="12sp"
+                        app:autoSizeMinTextSize="10sp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.76"
+                        app:layout_constraintStart_toEndOf="@+id/paGenero"
+                        app:layout_constraintTop_toBottomOf="@+id/vResult" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
